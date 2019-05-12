@@ -27,7 +27,12 @@ export default class LoginForm extends Component {
                 const username = values.username
                 // Use username as login token and store in memory.
                 sessionStorage.setItem('login_token', username)
-                this.setState({ loginSuccess : true })
+                
+                // Show loading spin to improve user experience.
+                this.setState({ loading : true })
+                setTimeout(() => {
+                    this.setState({ loginSuccess : true }) 
+                }, 1200);
             }
         });
     }
