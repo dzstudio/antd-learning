@@ -26,7 +26,7 @@ export default class AgentItem extends Component {
             resourcesName: ''
         });
     }
-
+    
     // Sync the resource input value to state.
     onResourcesNameChange = (e) => {
         this.setState({

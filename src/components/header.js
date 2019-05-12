@@ -9,13 +9,12 @@ export default class Header extends Component {
         const token = sessionStorage.getItem('login_token')
         this.state = {
             userToken: token,
-            current: [ this.props.selectedTab ],
             navigateTo: ''
         }        
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({navigateTo: '', current: [ nextProps.selectedTab ]})
+        this.setState({navigateTo: ''})
     }
 
     handleClick = (e) => {
@@ -43,7 +42,7 @@ export default class Header extends Component {
                         </Row>
                         <Row className="row text-right">
                             <Col>
-                                <Menu selectedKeys={this.state.current} onClick={this.handleClick}>
+                                <Menu selectedKeys={[this.props.selectedTab]} onClick={this.handleClick}>
                                     <Menu.Item key="/dashboard"><Icon type="home" />DASHBOARD</Menu.Item>
                                     <Menu.Item key="/mycruise"><Icon type="schedule" />MY CRUISE</Menu.Item>
                                     <Menu.Item key="/agents"><Icon type="solution" />AGENTS</Menu.Item>

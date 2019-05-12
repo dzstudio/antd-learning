@@ -1,6 +1,6 @@
 import * as ActionTypes from '../actions/actionTypes';
 
-export default (state = [], action) => {
+export default (state = {}, action) => {
     const { agentId, name, names } = action
     switch (action.type) {
         case ActionTypes.AGENT_RES_ADD:
