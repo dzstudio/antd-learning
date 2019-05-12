@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Dashboard extends Component {
+export default class Help extends Component {
     constructor(props, context) {
         super(props)
     }
@@ -11,7 +11,10 @@ export default class Dashboard extends Component {
 
     render() {
         return (
-            <div></div>
+            <div className="to-be-done">
+                <p>Help</p>
+                <p>Coming soon~</p>
+            </div>
         )
     }
 }

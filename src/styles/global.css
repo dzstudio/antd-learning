@@ -1,0 +1,56 @@
+
+ul li,dl dt{list-style: none}
+
+.text-left{ text-align: left !important; }
+.text-right{ text-align: right !important; }
+.input-base-width{width: 240px !important;}
+
+/* 全局导航栏样式 */
+#navbar {
+  padding: 0 20px;
+}
+
+#navbar ul {
+  border: none;
+}
+
+#navbar li {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+#navbar li.ant-menu-item-selected {
+  border-radius: 12px 12px 0 0;
+}
+
+#navbar label {
+  line-height: 40px;
+}
+
+#navbarLogo {
+  line-height: 80px;
+  font-size: 46px;
+  text-align: left;
+}
+
+/* 全局主体内容区域样式 */
+#mainContent {
+  margin: 0 20px;
+  border-top: solid 1px #e6f7ff;
+}
+
+.to-be-done {
+  margin: 100px auto 0;
+  text-align: center;
+}
+
+.to-be-done p {
+  line-height: 120px;
+  font-size: 100px;
+  color: #9AABBC;
+  margin: 10px 0;
+}
+
+.to-be-done p:last-child {
+  font-size: 70px;
+}

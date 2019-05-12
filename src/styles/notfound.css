@@ -1,0 +1,11 @@
+.notfound-desc {
+    color: darkgray;
+    font-size: 60pt;
+    width: 50%;
+    margin: 100pt auto;
+}
+
+.notfound-desc a {
+    text-decoration: underline;
+    font-size: 25pt;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Agents extends Component {
+export default class MyCruise extends Component {
     constructor(props, context) {
         super(props)
     }
@@ -8,10 +8,13 @@ export default class Agents extends Component {
     componentWillMount() {
 
     }
-
+    
     render() {
         return (
-            <div></div>
+            <div className="to-be-done">
+                <p>My Cruise</p>
+                <p>Coming soon~</p>
+            </div>
         )
     }
 }

@@ -1,0 +1,102 @@
+#agentsFilter {
+    height: 70px;
+    background: #e6f7ff;
+    padding: 0 20px;
+}
+
+#agentsFilter label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#agentContent {
+    margin-top: 20px;
+}
+
+#agentsFilter button.ant-btn {
+    margin: 20px 0 0 15px;
+}
+
+#agentList {
+    min-height: 200px;
+}
+
+.agent-item {
+    margin: 0 15px 15px 0;
+    padding: 15px;
+    height: 100px;
+    border: solid 1px #e6f7ff;
+    border-radius: 15px;
+}
+
+.agent-item.idle {
+    background: #def5d5;
+}
+
+.agent-item.building {
+    background: #fff0cf;    
+}
+
+.agent-thumb div {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #cdcdcd;
+}
+
+.agent-thumb, .agent-content, .agent-operation {
+    float: left;
+    margin-right: 20px;
+}
+
+.agent-content-desc {
+    line-height: 34px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.agent-email {
+    font-weight: bold;
+}
+
+.agent-info {
+    margin-left: 30px;
+}
+
+.agent-res-title {
+    margin-left: 12px;
+}
+
+.agent-res {
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.agent-operation {
+    float: right;
+    padding-top: 45px;
+    margin: 0;
+}
+
+#agentSummary {
+    background: #eaeaea;
+    min-height: 200px;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.agent-summary-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.agent-summary-content {
+    border-top: solid 1px #cdcdcd;
+    margin-top: 10px;
+    padding: 10px 0 20px;
+}
+
+.agent-summary-content label {
+    display: inline-block;
+    min-width: 120px;
+}

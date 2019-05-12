@@ -5,13 +5,12 @@ export default class Profile extends Component {
         super(props)
     }
 
-    componentWillMount() {
-
-    }
-
     render() {
         return (
-            <div></div>
+            <div className="to-be-done">
+                <p>Profile</p>
+                <p>Coming soon~</p>
+            </div>
         )
     }
 }
