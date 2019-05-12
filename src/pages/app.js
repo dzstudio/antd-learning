@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
-import rootReducers from '../store/reducers'
+import { rootReducers } from '../store'
 import Routes from '../configs/router.config'
 
 const initValues = {

@@ -1,9 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import * as base from '../pages/base'
 
-// 全局页面路由
+// The root route for whole app.
 export default () => (
     <Router>
         <Switch>

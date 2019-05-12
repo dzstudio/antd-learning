@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Menu, Icon, Row, Col, Button } from 'antd'
-import { Redirect } from "react-router-dom";
+import { Menu, Icon, Row, Col, Button, Popconfirm } from 'antd'
+import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default class Header extends Component {
     constructor(props, context) {
@@ -14,11 +15,11 @@ export default class Header extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({navigateTo: ''})
+        this.setState({navigateTo: '', current: [ nextProps.selectedTab ]})
     }
 
     handleClick = (e) => {
-        this.setState({current: [e.key], navigateTo: e.key})
+        this.setState({ navigateTo: e.key})
     }
     
     render() {
@@ -34,7 +35,10 @@ export default class Header extends Component {
                     <Col span={18}>
                         <Row className="row text-right">
                             <Col>
-                                <label>Signed in as { this.state.userToken }</label><Button type="link" onClick={ this.props.onLogout }>Sign out</Button>
+                                <label>Signed in as <Link to="/profile">{ this.state.userToken }</Link></label>
+                                <Popconfirm onConfirm={this.props.onLogout} placement="bottomRight" title="Are you sure to logout？" icon={<Icon type="question-circle-o" style={{ color: 'red' }} />}>
+                                    <Button  type="link"><Icon type="caret-right" style={{ color: '#1890ff' }} />Sign out</Button>
+                                </Popconfirm>
                             </Col>
                         </Row>
                         <Row className="row text-right">

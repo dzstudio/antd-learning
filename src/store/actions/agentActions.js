@@ -1,9 +1,10 @@
 import { AGENT_RES_ADD, AGENT_RES_DEL } from './actionTypes'
 
-export const agentResourceAdd = (agentId, name) => ({
+// The agent actions constructor.
+export const agentResourceAdd = (agentId, names) => ({
     type: AGENT_RES_ADD,
     agentId: agentId,
-    name: name
+    names: names
 })
 
 export const agentResourceDel = (agentId, name) => ({

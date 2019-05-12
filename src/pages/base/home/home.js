@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import { checkLogin } from '../../../configs/common'
-import Header from "../../../components/header";
+import Header from '../../../components/header';
+import Footer from '../../../components/footer';
 import * as base from '../'
 
 export default class Home extends Component {
     constructor(props, context) {
         super(props, context)
+
+        // User current path as key to specify current highlight tab.
         const currentPath = this.props.location.pathname
         this.state = {
             isLogin : checkLogin(),
@@ -15,7 +18,14 @@ export default class Home extends Component {
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+        // Update current highlight tab key.
+        const currentPath =nextProps.location.pathname
+        this.setState({selectedTab : (currentPath === '/' ? '/agents' : currentPath)})
+    }
+
     onLogout() {
+        // Clear login_token the only login state identifier.
         sessionStorage.removeItem('login_token')
         this.setState({ isLogin : false })
     }
@@ -37,6 +47,7 @@ export default class Home extends Component {
                     </Switch> : <Redirect to="/login" />
                 }
                 </div>
+                <Footer></Footer>
             </div>
         )
     }

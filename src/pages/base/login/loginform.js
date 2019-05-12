@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Spin, Form, Input, Icon, Button } from 'antd'
-import { Redirect } from "react-router-dom";
+import { Redirect } from 'react-router-dom';
     
 function hasErrors(fieldsError) {
     return Object.keys(fieldsError).some(field => fieldsError[field]);
@@ -16,6 +16,7 @@ export default class LoginForm extends Component {
     }
 
     componentDidMount() {
+        // Do form validation to disable the login btn when page loaded.
         this.props.form.validateFields();
     }
 
@@ -24,6 +25,7 @@ export default class LoginForm extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 const username = values.username
+                // Use username as login token and store in memory.
                 sessionStorage.setItem('login_token', username)
                 this.setState({ loginSuccess : true })
             }
@@ -31,7 +33,6 @@ export default class LoginForm extends Component {
     }
 
     render() {
-
         const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched, } = this.props.form;
         
         // Only show error after a field is touched.
@@ -44,6 +45,7 @@ export default class LoginForm extends Component {
                     <label>Front End Homework - 张黎 0510</label>
                 </div>
                 {
+                    // When login success, redirect to home page.
                     (this.state.loginSuccess) ? <Redirect to="/" /> : ''
                 }
                 <Spin spinning={this.state.loading}>

@@ -24,7 +24,7 @@
 .agent-item {
     margin: 0 15px 15px 0;
     padding: 15px;
-    height: 100px;
+    overflow: hidden;
     border: solid 1px #e6f7ff;
     border-radius: 15px;
 }
@@ -44,9 +44,20 @@
     background: #cdcdcd;
 }
 
-.agent-thumb, .agent-content, .agent-operation {
+.agent-thumb {
     float: left;
-    margin-right: 20px;
+}
+
+.agent-content {
+    margin-left: 88px;
+    margin-right: 90px;
+}
+
+.agent-operation {
+    float: right;
+    clear: both;
+    height: 25px;
+    margin: -25px 0 0 0;
 }
 
 .agent-content-desc {
@@ -70,12 +81,6 @@
 .agent-res {
     margin-right: 5px;
     color: rgba(0, 0, 0, 0.65);
-}
-
-.agent-operation {
-    float: right;
-    padding-top: 45px;
-    margin: 0;
 }
 
 #agentSummary {
