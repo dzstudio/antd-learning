@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { checkLogin } from '../../../configs/common'
 import Header from '../../../components/header';
 import Footer from '../../../components/footer';
-import * as base from '../'
+import asyncComponent from '../../../components/asyncComponent';
 
 export default class Home extends Component {
     constructor(props, context) {
@@ -31,6 +31,12 @@ export default class Home extends Component {
     }
 
     render() {
+        const AsyncAgents = asyncComponent(() => import('../agents/agents'))
+        const AsyncDashboard = asyncComponent(() => import('../dashboard/dashboard'))
+        const AsyncMycruise = asyncComponent(() => import('../mycruise/mycruise'))
+        const AsyncHelp = asyncComponent(() => import('../help/help'))
+        const AsyncProfile = asyncComponent(() => import('../profile/profile'))
+
         return (
             <div>
                 <Header selectedTab={ this.state.selectedTab } onLogout={ () => { this.onLogout() } } ></Header>
@@ -38,12 +44,12 @@ export default class Home extends Component {
                 {
                     this.state.isLogin ? 
                     <Switch>
-                    <Route exact path="/" component={base.agents} />
-                    <Route path="/agents" component={base.agents} />
-                    <Route path="/dashboard" component={base.dashboard} />
-                    <Route path="/mycruise" component={base.mycruise} />
-                    <Route path="/help" component={base.help} />
-                    <Route path="/profile" component={base.profile} />
+                    <Route exact path="/" component={AsyncAgents} />
+                    <Route path="/agents" component={AsyncAgents} />
+                    <Route path="/dashboard" component={AsyncDashboard} />
+                    <Route path="/mycruise" component={AsyncMycruise} />
+                    <Route path="/help" component={AsyncHelp} />
+                    <Route path="/profile" component={AsyncProfile} />
                     </Switch> : <Redirect to="/login" />
                 }
                 </div>
