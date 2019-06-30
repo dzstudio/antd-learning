@@ -47,7 +47,7 @@ export default class LoginForm extends Component {
         return (
             <div id="loginPage">
                 <div className="login-header">
-                    <label>Front End Homework - 张黎 0510</label>
+                    <label>Antd Learning Demo</label>
                 </div>
                 {
                     // When login success, redirect to home page.

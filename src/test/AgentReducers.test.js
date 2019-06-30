@@ -8,11 +8,11 @@ describe('agents/reducer', () => {
         const state = {
             agentList: [{
                 id: 1,
-                email: 'bjstmngbgr02.thoughtworks.com',
+                email: 'username02.dillonz.com',
                 status: 'idle',
                 ip: '192.168.1.2',
                 resources: ['firefox3', 'core-duo', 'chrome', 'mysql'],
-                target: '/var/lib/cruise-agent'
+                target: '/var/www/html'
             }]
         }
 
@@ -32,11 +32,11 @@ describe('agents/reducer', () => {
         const state = {
             agentList: [{
                 id: 1,
-                email: 'bjstmngbgr02.thoughtworks.com',
+                email: 'username02.dillonz.com',
                 status: 'idle',
                 ip: '192.168.1.2',
                 resources: ['firefox3', 'core-duo', 'mysql'],
-                target: '/var/lib/cruise-agent'
+                target: '/var/www/html'
             }]
         }
 

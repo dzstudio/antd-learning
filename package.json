@@ -1,7 +1,7 @@
 {
-  "name": "homework_0509",
+  "name": "antd_learning",
   "version": "0.1.0",
-  "homepage" : "http://www.dillonz.com/homework",
+  "homepage" : "http://www.dillonz.com",
   "private": true,
   "dependencies": {
     "@babel/core": "7.4.3",

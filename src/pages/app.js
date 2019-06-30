@@ -12,50 +12,50 @@ const initValues = {
       building: 2,
       idle: 2,
       history: [
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test",
-        "bjstdmngbgr02/Acceptance_test"
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test",
+        "system02/Acceptance_test"
       ]
     },
     agentList: [
       {
         id: 1,
-        email: 'bjstmngbgr02.thoughtworks.com',
+        email: 'username02.dillonz.com',
         status: 'idle',
         ip: '192.168.1.2',
         resources: ['firefox3', 'core-duo', 'chrome', 'mysql'],
-        target: '/var/lib/cruise-agent'
+        target: '/var/www/html'
       },
       {
         id: 2,
-        email: 'bjstmngbgr03.thoughtworks.com',
+        email: 'username03.dillonz.com',
         status: 'building',
         ip: '192.168.1.2',
         resources: ['firefox3', 'mysql', 'core-duo'],
-        target: '/var/lib/cruise-agent'
+        target: '/var/www/html'
       },
       {
         id: 3,
-        email: 'bjstmngbgr04.thoughtworks.com',
+        email: 'username04.dillonz.com',
         status: 'building',
         ip: '192.168.1.3',
         resources: ['firefox3', 'mysql', 'core-duo'],
-        target: '/var/lib/cruise-agent'
+        target: '/var/www/html'
       },
       {
         id: 4,
-        email: 'bjstmngbgr05.thoughtworks.com',
+        email: 'username05.dillonz.com',
         status: 'idle',
         ip: '192.168.1.4',
         resources: [],
-        target: '/var/lib/cruise-agent'
+        target: '/var/www/html'
       }
     ]
   }
